@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+wolof/__init__.py
+wolof.egg-info/PKG-INFO
+wolof.egg-info/SOURCES.txt
+wolof.egg-info/dependency_links.txt
+wolof.egg-info/requires.txt
+wolof.egg-info/top_level.txt
+wolof/data/__init__.py
+wolof/data/dataset.py
+wolof/engine/__init__.py
+wolof/model/__init__.py
+wolof/model/model.py
