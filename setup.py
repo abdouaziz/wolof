@@ -17,7 +17,7 @@ if __name__ == "__main__":
         license="Apache License",
         packages=find_packages(),
         include_package_data=True,
-        install_requires=["torch>=1.6.0"],
+        install_requires=["torch", "transformers", "numpy", "tqdm"],
         platforms=["linux", "unix"],
         python_requires=">3.5.2",
     )

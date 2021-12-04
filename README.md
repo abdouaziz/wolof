@@ -24,24 +24,7 @@ This is how the idea of the **Wolof library** was born, which allows us to do se
 ...
 
 
-
- 
-
-```python
-class MyModel(wolof.Model):
-    def __init__(self):
-        super().__init__()
-
-    def fetch_scheduler(self):
-        # create your own scheduler
-
-    def fetch_optimizer(self):
-        # create your own optimizer
-
-    def forward(self, ids, mask, token_type_ids, targets=None):
-        # do your own forward
-        
-```
+## Installation
 
  
 ```python
@@ -52,8 +35,8 @@ import pandas as pd
 df = pd.read_csv("data/train.csv")
 
 
-train_dataset = TrainDataset(df.text , df.label)
-valid_dataset = ValidDataset(df.text , df.label)
+train_dataset = Dataset(df.text , df.label)
+valid_dataset = Dataset(df.text , df.label)
 
 # init model
 model = MyModel()
