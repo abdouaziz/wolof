@@ -56,6 +56,45 @@ class Model(torch.nn.Module):
     def forward(self, *args, **kwargs):
         return super().forward(*args, **kwargs)
 
+    def train_batch(self, data, target):
+        self.train()
+        self.optimizer.zero_grad()
+        output = self.forward(data)
+        loss = self.loss(output, target)
+        loss.backward()
+        self.optimizer.step()
+        return loss
+
+    def valid_batch(self, data, target):
+        self.eval()
+        output = self.forward(data)
+        loss = self.loss(output, target)
+        return loss
+
+    def predict(self, data):
+        self.eval()
+        output = self.forward(data)
+        return output
+
+    def predict_batch(self, data):
+        self.eval()
+        output = self.forward(data)
+        return output
+
+    def predict_epoch(self, data_loader):
+        self.eval()
+        predictions = []
+        for batch_idx, (data, target) in enumerate(data_loader):
+            predictions.append(self.predict_batch(data))
+        return predictions
+
+    def predict_dataset(self, dataset, batch_size=16):
+        self.eval()
+        predictions = []
+        for batch_idx, (data, target) in enumerate(dataset):
+            predictions.append(self.predict_batch(data))
+        return predictions
+
     def train_epoch(self, train_dataset, train_bs, train_shuffle):
         self.train_loader = torch.utils.data.DataLoader(
             train_dataset,
@@ -73,7 +112,6 @@ class Model(torch.nn.Module):
         )
         for batch_idx, (data, target) in enumerate(self.valid_loader):
             self.valid_batch(data, target)
-            
 
     def save(self, model_path, weights_only=False):
         model_state_dict = self.state_dict()
