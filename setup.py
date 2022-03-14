@@ -1,23 +1,26 @@
-from setuptools import find_packages, setup
+import setuptools
 
-with open("README.md") as f:
-    long_description = f.read()
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
-
-if __name__ == "__main__":
-    setup(
-        name="wolof",
-        version="0.1.0",
-        description="wolof is a python library for the Wolof language",
-        long_description=long_description,
-        long_description_content_type="text/markdown",
-        author="Abdou Aziz DIOP",
-        author_email="abdouaziz@gmail.com",
-        url="https://github.com/abdouaziz/wolof",
-        license="Apache License",
-        packages=find_packages(),
-        include_package_data=True,
-        install_requires=["torch", "transformers", "numpy", "tqdm"],
-        platforms=["linux", "unix"],
-        python_requires=">3.5.2",
-    )
+setuptools.setup(
+    name="wolof",
+    version="0.0.5",
+    author="Abdou Aziz DIOP",
+    author_email="abdouaziz@gmail.com",
+    description="wolof is a python library for the Wolof language",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/abdouaziz/wolof",
+    project_urls={
+        "Bug Tracker": "https://github.com/abdouaziz/wolof/issues",
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    python_requires=">=3.6",
+)
