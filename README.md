@@ -1,13 +1,4 @@
-# <h1 align="center"> Wolof </h1>
-
-
-<p align="center">
-
-<img src="./input/woloff.jpg">
-</p>
-
-
-## Description
+# Wolof : Your Library for Wolof Language
 
 **Wolof** is a language spoken in Senegal in neighboring countries, many works are written in Wolof or the need to have a tool that allows us to know better this language. 
 
@@ -24,35 +15,31 @@ This is how the idea of the **Wolof library** was born, which allows us to do se
 ...
 
 
-## Installation
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+
+### Prerequisites
+
+ 
+install the dependencies for this project by running the following commands in your terminal:
+
+```
+ pip install wolof
+```
+
 
  
 ```python
-# init datasets
-from wolo.data import Dataset
-import pandas as pd
+from wolof.asr import Speech2Text
 
-df = pd.read_csv("data/train.csv")
+asr = Speech2Text(model_name="abdouaziiz/wav2vec2-xls-r-300m-wolof")
 
+audio_file = "audio.wav"
 
-train_dataset = Dataset(df.text , df.label)
-valid_dataset = Dataset(df.text , df.label)
-
-# init model
-model = MyModel()
-
- 
-# train model. 
-model.fit(
-    train_dataset,
-    valid_dataset=valid_dataset,
-    train_batch=32,
-    valid_batch=32,
-    device="cuda",
-    epochs=50,
-    save_path="model.pth",
-     
-)
-
- 
+prediction = asr.predict(audio_file)
 ```
+
+
+
+You can checkout examples in `examples/`
