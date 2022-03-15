@@ -12,7 +12,7 @@
         <img alt="CI" src="https://github.com/allenai/allennlp/workflows/CI/badge.svg?event=push&branch=main">
     </a>
     <a href="https://pypi.org/project/wolof/">
-        <img alt="PyPI" src="https://pypi.org/project/wolof/">
+        <img alt="PyPI" src="https://img.shields.io/pypi/v/wolof"
     </a>    
 </p>
 
