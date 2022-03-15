@@ -12,7 +12,7 @@
         <img alt="CI" src="https://github.com/allenai/allennlp/workflows/CI/badge.svg?event=push&branch=main">
     </a>
     <a href="https://pypi.org/project/wolof/">
-        # <img alt="PyPI" src="https://pypi.org/project/wolof/">
+        <img alt="PyPI" src="https://pypi.org/project/wolof/">
     </a>    
 </p>
 
@@ -21,8 +21,7 @@
 
 **Wolof** is a language spoken in Senegal in neighboring countries, many works are written in Wolof or the need to have a tool that allows us to know better this language. 
 
-This is how the idea of the **Wolof library** was born, which allows us to do several specific tasks in Wolof languages such as text classification, automatic translation, but also automatic speech recognition. 
-
+**Wolof library** allows us to do several specific tasks in Wolof languages such as text classification, translation, automatic speech recognition. 
 
 
 ### Why Wolof library ?:
@@ -31,32 +30,31 @@ This is how the idea of the **Wolof library** was born, which allows us to do se
 - customizable 
 - clean code
  
-...
-
-
-
 ## Installation
+### Requirements
+- Python >= 3.6 
+- Torch 
+- Transformers 
 
-This repo is tested on Python 3.6+.
 
 ### With pip
 
-wolof can be installed by pip as follows:
+wolof can be installed using pip as follows:
 
-```py
-pip install wolof
+```
+pip install wolof 
 ```
 
 ### From source
-
 
 ```py
 pip install git+https://github.com/abdouaziz/wolof.git
 ```
 
+## Usage
 
-## Use 
- 
+
+
 ```python
 from wolof.asr import Speech2Text
 
@@ -68,3 +66,10 @@ prediction = asr.predict(audio_file)
 ```
 
 You can checkout examples in `examples/`
+
+<hr>
+
+## Author
+- Abdou Aziz DIOP @abdouaziz
+- email : abdouaziz.g@gmail.com
+- linkedin : https://www.linkedin.com/in/abdouaziiz/
