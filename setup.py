@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="wolof",
-    version="0.0.1",
+    version="0.0.3",
     author="Abdou Aziz DIOP",
     author_email="abdouaziz@gmail.com",
     description="wolof is a python library for the Wolof language",

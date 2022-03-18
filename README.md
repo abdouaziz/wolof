@@ -65,9 +65,63 @@ audio_file = "audio.wav"
 prediction = asr.predict(audio_file)
 ```
 
+# Pipeline
+
+The pipelines are a great and easy way to use models for inference. These pipelines are objects that abstract most of the complex code from the library,offering a simple API dedicated to several tasks Masked Language Modeling, Sentiment Analysis .
+
+
+
+
+**bert-base-wolof** is pretrained bert-base model on wolof language  .
+**sora-wolof** is pretrained roberta model on wolof language  .
+	
+## Models in Wolof library
+	
+| Model name | Number of layers | Attention Heads | Embedding Dimension | Total Parameters |
+| :------:       |   :---: | :---: | :---: | :---: |
+| `bert-base-wolof` | 6    | 12   | 514   | 56931622 M |
+| `soraberta-base` | 6    | 12   | 514   | 83 M |
+	 
+
+## Using Soraberta or BERT-base-wolof
+ 	
+```python
+>>> from wolof import Pipeline
+>>> unmasker = Pipeline(task='fill-mask', model_name='abdouaziiz/bert-base-wolof')
+>>> unmasker("kuy yoot du [MASK].")
+
+[{'sequence': '[CLS] kuy yoot du seqet. [SEP]',
+	'score': 0.09505125880241394,
+	'token': 13578},
+	{'sequence': '[CLS] kuy yoot du daw. [SEP]',
+	'score': 0.08882280439138412,
+	'token': 679},
+	{'sequence': '[CLS] kuy yoot du yoot. [SEP]',
+	'score': 0.057790059596300125,
+	'token': 5117},
+	{'sequence': '[CLS] kuy yoot du seqat. [SEP]',
+	'score': 0.05671025067567825,
+	'token': 4992},
+	{'sequence': '[CLS] kuy yoot du yaqu. [SEP]',
+	'score': 0.0469999685883522,
+	'token': 1735}]
+```
+	
+
+for ***`task`***  we can have the following values: 'fill-mask', 'sentiment-analysis'
+
+
+
+
+
+
 You can checkout examples in `examples/`
 
 <hr>
+
+
+
+
 
 ## Author
 - Abdou Aziz DIOP @abdouaziz
