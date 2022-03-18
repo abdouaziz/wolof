@@ -56,7 +56,7 @@ pip install git+https://github.com/abdouaziz/wolof.git
 
 
 ```python
-from wolof.asr import Speech2Text
+from wolof import Speech2Text
 
 asr = Speech2Text(model_name="abdouaziiz/wav2vec2-xls-r-300m-wolof")
 
