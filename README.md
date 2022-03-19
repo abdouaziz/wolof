@@ -84,6 +84,8 @@ The pipelines are a great and easy way to use models for inference. These pipeli
 	 
 
 ## Using Soraberta or BERT-base-wolof
+
+Let's use  ***`fill_mask`***  for masked language modeling . We mask a word with the token ***`[MASK]`*** in the given input_text and the unmasker predict the right word corresponding to the token ***`[MASK]`*** .
  	
 ```python
 >>> from wolof import Pipeline
