@@ -70,8 +70,6 @@ prediction = asr.predict(audio_file)
 The pipelines are a great and easy way to use models for inference. These pipelines are objects that abstract most of the complex code from the library,offering a simple API dedicated to several tasks Masked Language Modeling, Sentiment Analysis .
 
 
-
-
 **bert-base-wolof** is pretrained bert-base model on wolof language  .
 **sora-wolof** is pretrained roberta model on wolof language  .
 	
@@ -120,9 +118,6 @@ for ***`task`***  we can have the following values: 'fill-mask', 'sentiment-anal
 You can checkout examples in `examples/`
 
 <hr>
-
-
-
 
 
 ## Author
