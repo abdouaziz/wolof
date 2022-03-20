@@ -106,7 +106,17 @@ Let's use  ***`fill_mask`***  for masked language modeling . We mask a word with
 	'score': 0.0469999685883522,
 	'token': 1735}]
 ```
-	
+
+
+
+# Machine Translation in Wolof
+...
+
+
+
+
+
+
 
 for ***`task`***  we can have the following values: 'fill-mask', 'sentiment-analysis'
 
