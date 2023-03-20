@@ -132,5 +132,5 @@ You can checkout examples in `examples/`
 
 ## Author
 - Abdou Aziz DIOP @abdouaziz
-- email : abdouaziz.g@gmail.com
+- email : abdouaziz@gmail.com
 - linkedin : https://www.linkedin.com/in/abdouaziiz/
