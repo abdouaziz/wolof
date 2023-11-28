@@ -62,7 +62,7 @@ asr = Speech2Text(model_name="abdouaziiz/wav2vec2-xls-r-300m-wolof")
 
 audio_file = "audio.wav"
 
-prediction = asr.predict(audio_file)
+prediction = asr(audio_file)
 ```
 
 # Pipeline
